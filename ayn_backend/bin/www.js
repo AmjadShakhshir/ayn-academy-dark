@@ -4,9 +4,10 @@
  * Module dependencies.
  */
 
-var app = require('../app');
-var debug = require('debug')('ayn-backend:server');
-var http = require('http');
+import app from '../app.js';
+import debug from 'debug';
+const debugServer = debug('ayn-backend:server');
+import http from 'http';
 
 /**
  * Get port from environment and store in Express.
@@ -25,7 +26,7 @@ var server = http.createServer(app);
  * Listen on provided port, on all network interfaces.
  */
 
-server.listen(port);
+server.listen(port, () => console.log(`Server running on port ${port}`));
 server.on('error', onError);
 server.on('listening', onListening);
 
@@ -86,5 +87,5 @@ function onListening() {
   var bind = typeof addr === 'string'
     ? 'pipe ' + addr
     : 'port ' + addr.port;
-  debug('Listening on ' + bind);
+  debugServer('Listening on ' + bind);
 }
