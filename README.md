@@ -45,21 +45,14 @@ npm run dev
 npm run server
 ```
 
-### Material UI
-
-Material UI is available as an [npm package](https://www.npmjs.com/package/@mui/material).
+### React-bootstrap
 
 **npm:**
 
 ```sh
-npm install @mui/material @emotion/react @emotion/styled
+npm i react-bootstrap
 ```
 
-**yarn:**
-
-```sh
-yarn add @mui/material @emotion/react @emotion/styled
-```
 ## Build & Deploy
 
 ```sh
