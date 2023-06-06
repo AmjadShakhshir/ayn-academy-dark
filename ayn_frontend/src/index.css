@@ -1,14 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+.gradient-bg {
+    background: -moz-radial-gradient(circle at 25% 3%, rgba(4, 12, 24, 1) 0%, rgba(0, 40, 83, 1) 100%);
 
-:root {
-  --font-family: 'Manrope', sans-serif;
+    /* safari 5.1+,chrome 10+ */
+    background: -webkit-radial-gradient(circle at 25% 3%, rgba(4, 12, 24, 1) 0%, rgba(0, 40, 83, 1) 100%);
 
-  --gradient-text: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
-  --gradient-bar: linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%);
+    /* opera 11.10+ */
+    background: -o-radial-gradient(circle at 25% 3%, rgba(4, 12, 24, 1) 0%, rgba(0, 40, 83, 1) 100%);
 
-  --color-bg: #040C18;
-  --color-footer: #031B34;
-  --color-blog: #042c54;
-  --color-text: #81AFDD;
-  --color-subtext: #FF8A71;
+    /* ie 10+ */
+    background: -ms-radial-gradient(circle at 25% 3%, rgba(4, 12, 24, 1) 0%, rgba(0, 40, 83, 1) 100%);
+
+    /* global 92%+ browsers support */
+    background: radial-gradient(circle at 25% 3%, rgba(4, 12, 24, 1) 0%, rgba(0, 40, 83, 1) 100%);
+}
+
+body {
+    direction: rtl;
+}
+
+.input-group .btn {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-top-left-radius: 4px !important;
+    border-bottom-left-radius: 4px !important;
+    border-right-width: 0px !important;
+    border-left-width: 1px !important;
+
+}
+
+.input-group .form-control:first-child {
+    border-top-right-radius: 4px !important;
+    border-bottom-right-radius: 4px !important;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+
 }

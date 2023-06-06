@@ -6,7 +6,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node ayn_backend/bin/www.js",
-    "server": "nodemon ayn_backend/bin/www.js"
+    "server": "nodemon ayn_backend/bin/www.js",
+    "client": "npm run dev --prefix ayn_frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -23,6 +25,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "concurrently": "^8.0.1",
     "nodemon": "^2.0.22"
   }
 }
