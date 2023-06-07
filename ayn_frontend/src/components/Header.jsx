@@ -1,9 +1,29 @@
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 import { FaSignInAlt, FaSignOutAlt } from 'react-icons/fa';
+import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import images from '../constants/images';
 import { LinkContainer } from 'react-router-bootstrap';
+import { logout } from '../slices/authSlice';
+import { useLogoutMutation } from '../slices/usersApiSlice';
 
 const Header = () => {
+  const { userInfo } = useSelector((state) => state.auth);
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const [logoutApiCall] = useLogoutMutation();
+
+  const logoutHandler = async () => {
+    try {
+      await logoutApiCall().unwrap();
+      dispatch(logout());
+      navigate('/');
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <>
       <header className="gradient-bg">
@@ -43,16 +63,38 @@ const Header = () => {
                 </LinkContainer>
               </Nav>
               <Nav className='me-auto'>
-                <LinkContainer to='/login'>
-                  <Nav.Link>
-                      <FaSignInAlt /> تسجيل الدخول
-                  </Nav.Link>
-                </LinkContainer>
-                <LinkContainer to='/register'>
-                  <Nav.Link>
-                      <FaSignOutAlt /> تسجيل
-                  </Nav.Link>
-                </LinkContainer>
+                { userInfo ? (
+                  <>
+                  <NavDropdown title={userInfo.name} id='username'>
+                      <LinkContainer to='/profile'>
+                        <NavDropdown.Item>
+                          الملف الشخصي <FaSignInAlt />
+                        </NavDropdown.Item>
+                      </LinkContainer>
+                      <LinkContainer to='/logout'>
+                        <NavDropdown.Item onClick={ logoutHandler }>
+                          تسجيل الخروج  <FaSignOutAlt />
+                        </NavDropdown.Item>
+                      </LinkContainer>
+                  </NavDropdown>
+                  </>
+                ):
+                (
+                  <>
+                    <LinkContainer to='/login'>
+                      <NavDropdown.Item
+                      className='p-2 text-white border border-4 rounded bg-danger mx-2'>
+                        تسجيل الدخول  <FaSignInAlt /> 
+                      </NavDropdown.Item>
+                    </LinkContainer>
+                    <LinkContainer to='/register'>
+                      <NavDropdown.Item
+                      className='text-white p-2 border border-4 rounded'>
+                        تسجيل  <FaSignInAlt />
+                      </NavDropdown.Item>
+                    </LinkContainer>
+                  </>
+                )}
               </Nav>
             </Navbar.Collapse>
           </Container>
