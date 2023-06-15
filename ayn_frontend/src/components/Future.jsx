@@ -2,7 +2,7 @@ import { Col, Container, Row } from "react-bootstrap"
 
 const Future = () => {
   return (
-    <section>
+    <section className="bg-warning">
         <Container className="container">
             <Row className="p-5 row">
                 <Col className="col-12 col-md-6">

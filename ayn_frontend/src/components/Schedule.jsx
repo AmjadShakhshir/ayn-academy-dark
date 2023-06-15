@@ -4,7 +4,7 @@ import { BsListCheck } from 'react-icons/bs'
 
 const Schedule = () => {
   return (
-    <section>
+    <section className='bg-light bg-gradient'>
       <Container className='container'>
         <Row className='p-5'>
           <Col className='col-12'>

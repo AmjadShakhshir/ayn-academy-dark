@@ -16,7 +16,7 @@ const Hero = () => {
                         aria-label="أدخل بريدك الشخصي" aria-describedby="button-addon2" />
                         <LinkContainer to='/register'>
                             <button
-                            className="btn btn-primary rounded-left"
+                            className="btn btn-orange rounded-left p-2 text-light fs-5 fw-bold"
                             type="button"
                             id="button-addon2">ابدأ الآن</button>
                         </LinkContainer>

@@ -4,9 +4,9 @@ import images from "../constants/images"
 const Opportunities = () => {
   return (
     <>
-        <section>
+        <section className="bg-secondary-subtle">
             <Container className="container">
-                <Row className="p-5">
+                <Row className="p-5 gx-5">
                     <Col className="py-2 col-12 col-md-6">
                         <img src={images.possibility}
                         className="img-fluid"
@@ -21,15 +21,15 @@ const Opportunities = () => {
                 </Row>
             </Container>
         </section>
-        <section>
+        <section className="bg-secondary text-white">
             <Container className="container">
                 <Row className="p-5">
                     <Col className="col-12 col-md-6 py-2">
                         <span className="py-2">سارع في طلب الإنضمام اليوم والتحق بدوراتنا.</span>
                         <h4 className="py-2">سجل اليوم و تصفح عدد لا نهائي من الدورات المميزة</h4>
                     </Col>
-                    <Col className="text-center">
-                        <button className="btn btn-warning">إبدأ الآن</button>
+                    <Col className="d-flex justify-content-end align-items-center">
+                        <button className="btn btn-warning btn-lg text-bold">إبدأ الآن</button>
                     </Col>
                 </Row>
             </Container>
