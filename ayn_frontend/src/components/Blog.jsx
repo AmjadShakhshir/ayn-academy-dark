@@ -1,5 +1,6 @@
 import images from "../constants/images"
-import { Card, Col, Container, Row } from 'react-bootstrap'
+import { Col, Container, Row } from 'react-bootstrap'
+import BlogCardGrid from "./BlogCardGrid"
 
 const Blog = () => {
   return (
@@ -11,65 +12,15 @@ const Blog = () => {
                 </Col>
             </Row>
             <Row className="p-2">
-                <Col className="col-12 col-md-6 py-2">
-                    <Card>
-                        <Card.Img variant="top" src={images.blog01} alt="binary code of ones and zeros"
-                    className="img-fluid" />
-
-                        <Card.Body>
-                            <Card.Title>التعلم الذاتي</Card.Title>
-                            <Card.Link href="#">إقرأ المزيد</Card.Link>
-                        </Card.Body>
-                    </Card>
-                </Col>
+                <BlogCardGrid title={"التعلم الذاتي"} images={images.blog01}  />
                 <Col className="col-12 col-md-6">
                     <Row className="row py-2">
-                        <Col className="col-12 col-md-6 py-2">
-                            <Card>
-                                <Card.Img variant="top" src={images.blog02} alt="binary code of ones and zeros"
-                            className="img-fluid" />
-
-                                <Card.Body>
-                                    <Card.Title>التعلم الذاتي</Card.Title>
-                                    <Card.Link href="#">إقرأ المزيد</Card.Link>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col className="col-12 col-md-6 py-2">
-                            <Card>
-                                <Card.Img variant="top" src={images.blog03} alt="binary code of ones and zeros"
-                            className="img-fluid" />
-
-                                <Card.Body>
-                                    <Card.Title>التعلم الذاتي</Card.Title>
-                                    <Card.Link href="#">إقرأ المزيد</Card.Link>
-                                </Card.Body>
-                            </Card>
-                        </Col>
+                        <BlogCardGrid title={"التعلم الذاتي"} images={images.blog02}  />
+                        <BlogCardGrid title={"التعلم الذاتي"} images={images.blog03}  />
                     </Row>
                     <Row className="py-2">
-                        <Col className="col-12 col-md-6 py-2">
-                            <Card>
-                                <Card.Img variant="top" src={images.blog04} alt="binary code of ones and zeros"
-                            className="img-fluid" />
-
-                                <Card.Body>
-                                    <Card.Title>التعلم الذاتي</Card.Title>
-                                    <Card.Link href="#">إقرأ المزيد</Card.Link>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col className="col-12 col-md-6 py-2">
-                            <Card>
-                                <Card.Img variant="top" src={images.blog05} alt="binary code of ones and zeros"
-                            className="img-fluid" />
-
-                                <Card.Body>
-                                    <Card.Title>التعلم الذاتي</Card.Title>
-                                    <Card.Link href="#">إقرأ المزيد</Card.Link>
-                                </Card.Body>
-                            </Card>
-                        </Col>
+                        <BlogCardGrid title={"التعلم الذاتي"} images={images.blog04}  />
+                        <BlogCardGrid title={"التعلم الذاتي"} images={images.blog05}  />
                     </Row>
                 </Col>
             </Row>
