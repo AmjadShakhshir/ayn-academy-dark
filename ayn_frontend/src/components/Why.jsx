@@ -3,7 +3,7 @@ import { LinkContainer } from "react-router-bootstrap"
 
 const Why = () => {
   return (
-    <section className="p-5" id="why">
+    <section className="p-5 bg-dark text-white m-4 rounded" id="why">
         <Container className="container">
             <Row className="p-3 d-flex flex-column flex-lg-row ">
                 <Col>

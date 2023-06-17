@@ -26,7 +26,7 @@ const Header = () => {
   };
   return (
     <>
-      <header className="gradient-bg">
+      <header className="bg-dark bg-gradient">
         <Navbar expand='lg' className='py-4 navbar-dark' collapseOnSelect>
           <Container>
             <LinkContainer to='/'>
