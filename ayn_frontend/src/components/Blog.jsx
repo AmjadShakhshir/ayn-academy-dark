@@ -12,15 +12,15 @@ const Blog = () => {
                 </Col>
             </Row>
             <Row className="p-2">
-                <BlogCardGrid title={"التعلم الذاتي"} images={images.blog01}  />
+                <BlogCardGrid title={"التعلم الذاتي"} images={images.blog01} badge={false} />
                 <Col className="col-12 col-md-6">
                     <Row className="row py-2">
-                        <BlogCardGrid title={"التعلم الذاتي"} images={images.blog02}  />
-                        <BlogCardGrid title={"التعلم الذاتي"} images={images.blog03}  />
+                        <BlogCardGrid title={"التعلم الذاتي"} images={images.blog02} badge={false} />
+                        <BlogCardGrid title={"التعلم الذاتي"} images={images.blog03} badge={true} />
                     </Row>
                     <Row className="py-2">
-                        <BlogCardGrid title={"التعلم الذاتي"} images={images.blog04}  />
-                        <BlogCardGrid title={"التعلم الذاتي"} images={images.blog05}  />
+                        <BlogCardGrid title={"التعلم الذاتي"} images={images.blog04} badge={false} />
+                        <BlogCardGrid title={"التعلم الذاتي"} images={images.blog05} badge={false} />
                     </Row>
                 </Col>
             </Row>
